@@ -8,7 +8,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Darkyne | Home</title>
-        <link rel="stylesheet" href="./css/main.css">
     </head>
 
     <body>
@@ -23,11 +22,14 @@
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<li class='flex-item'>";
                         echo "<h2>" . $row['ProjectName'] . "</h2>";
-                        echo "<p>" . $row['CreatedOn'] . "</p>";
+                        echo "<a target='_blank' href='" . $row['ProjectURL'] . "'>Github/" . $row['ProjectName'] . "</a>";
+                        echo "<p class='flex-bottom'>" . "created on " . $row['CreatedOn'] . "</p>";
                         echo "</li>";
                     }
                 }
             ?>
         </ul>
+
+        <?php include_once './components/navigation/navigation.php' ?>
     </body>
 </html>
