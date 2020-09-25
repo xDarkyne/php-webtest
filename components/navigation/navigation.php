@@ -8,6 +8,16 @@
     </head>
 
     <body>
-        
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li class="main-nav-item">
+                    <a href="" class="main-nav-link">Home</a>
+                </li>
+
+                <li class="main-nav-item">
+                    <a href="" class="main-nav-link">Work</a>
+                </li>
+            </ul>
+        </nav>
     </body>
 </html>

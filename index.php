@@ -12,9 +12,12 @@
 
     <body>
         <p>Pulls the latest 3 entries in database in descending order</p>
+        <button id="php-button">PHP</button>
+        <button id="cs-button">C#</button>
         <ul class="flex-list">
             <?php 
-                $sql = "SELECT * FROM projects ORDER BY idProjects DESC LIMIT 3;";
+                /*$sql = "SELECT * FROM projects ORDER BY idProjects DESC LIMIT 3;";*/
+                $sql = "SELECT * FROM projects";
                 $result = mysqli_query($connection, $sql);
                 $resultCheck = mysqli_num_rows($result);
 
@@ -31,5 +34,6 @@
         </ul>
 
         <?php include_once './components/navigation/navigation.php' ?>
+        <script src="./js/script.js">
     </body>
 </html>
